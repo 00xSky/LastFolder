@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <!-- Implicit usings off because WPF + WinForms (tray icon) are used together: avoids name clashes -->
+    <ImplicitUsings>disable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>LastFolder</AssemblyName>
+    <RootNamespace>LastFolder</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <!-- WFO0003 is meant for WinForms apps; for WPF, DPI awareness is set through the manifest -->
+    <NoWarn>$(NoWarn);WFO0003</NoWarn>
+    <Product>LastFolder</Product>
+    <Version>1.0.0</Version>
+    <!-- Keep "1.0.0" in the file's version info, without the "+<git hash>" suffix -->
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+    <Company>00xSky</Company>
+    <Authors>00xSky</Authors>
+    <Copyright>Copyright (c) 2026 00xSky</Copyright>
+    <ApplicationIcon>assets\LastFolder.ico</ApplicationIcon>
+  </PropertyGroup>
+
+</Project>
